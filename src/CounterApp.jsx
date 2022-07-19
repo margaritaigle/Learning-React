@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { hydrate } from 'react-dom';
+
 
 export const CounterApp = ( {value} ) => {
 
@@ -25,13 +25,16 @@ export const CounterApp = ( {value} ) => {
             <h1>CounterApp</h1>
             <h2> { counter } </h2>
 
-            <button onClick={ handleAdd }>
+            <button aria-label='btn-increment' 
+                    onClick={handleAdd}>
                 +1
             </button>
-            <button onClick={ handleSubst }>
+            <button aria-label='btn-decrement' 
+                    onClick={handleSubst}>
                 -1
             </button>
-            <button onClick={ handleReset }>
+            <button aria-label='btn-reset' 
+                    onClick={handleReset}>
                 Reset
             </button>
         </>
